@@ -7,10 +7,9 @@ def game_life():
     """
     global can,x_c,y_c,c,dico_state,sleep,fen,inp,play
     #Définit la nombre de cellules en hauteur et en largeur de la grille
-    x_c=70
-    y_c=35
+    x_c,y_c=70,40
 
-    c=15 #Taille en pixels du coté de chaque cellule
+    c=800//y_c #Taille en pixels du coté de chaque cellule
     width,height=x_c*c,y_c*c
     sleep=50 #Temps en ms entre chaque calcul du prochain état de la grille
     play=False
@@ -21,7 +20,7 @@ def game_life():
     can=tk.Canvas(fen,width=width,height=height,bg='#DDDDDD')
     can.pack(padx=3,pady=2)
 
-    frame_bottom=tk.Frame(fen,width=width,height=50,bg='gray',bd=2,relief=tk.SOLID)
+    frame_bottom=tk.Frame(fen,width=width,height=80,bg='gray',bd=2,relief=tk.SOLID)
     frame_bottom.pack_propagate(False)
     frame_bottom.pack(pady=5)
 
